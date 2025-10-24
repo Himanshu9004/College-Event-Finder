@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Organization Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>➕ Create New Event</h2>
+    <form id="create-event-form">
+      <input type="text" id="event-name" placeholder="Event Name" required>
+<input type="text" id="club-name" placeholder="Club/Community Name" required>
+<input type="text" id="event-eligible" placeholder="Eligible Participants..." required>
+<input type="date" id="event-date" required>
+<textarea id="event-description" placeholder="Event Description" required></textarea>
+<input type="url" id="event-link" placeholder="Google Form Registration Link" required>
+      
+      <button type="submit" class="btn">Create Event</button>
+    </form>
+  </div>
+</body>
+</html>

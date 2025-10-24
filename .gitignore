@@ -1,0 +1,9 @@
+# Database
+events.db
+
+# Python cache
+__pycache__/
+
+# Virtual environment (agar banaya ho toh)
+venv/
+.venv/
