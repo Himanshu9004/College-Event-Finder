@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Login</title>
+  <title>Admin Login</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
+
   <div class="container">
     <img src="logo.png" alt="Logo" class="logo">
     <h2>User Login</h2>
-    <form id="user-login-form">
-      <input type="email" id="user-login-email" placeholder="Email" value="himanshu@gmail.com" required>
-      <input type="password" id="user-login-password" placeholder="Password" value="12345">
+    <form id="user-login-form" class="form-vertical">
+
+    <div class="input-group">
+        <input type="email" id="user-login-email" placeholder=" " value="" required>
+        <label for="user-login-email">Email</label>
+    </div>
+
+    <div class="input-group">
+        <input type="password" id="user-login-password" placeholder=" " value="" required>
+        <label for="user-login-password">Password</label>
+    </div>
       
-      <button type="submit" class="btn">User Login</button>
-    </form>
+    <button type="submit" class="btn">User Login</button>
+</form>
     <p>Don't have an account? <a href="user-register.html">Register Here</a></p>
-    <a href="index.html" class="btn">⬅ Back</a>
+    <a href="index.html" class="btn btn-secondary" style="margin-top: 10px;">⬅ Back</a>
   </div>
 </body>
 </html>

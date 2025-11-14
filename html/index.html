@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <header class="site-header">
-  <div class="header-left">
-    <img src="logo.png" alt="Logo" class="logo-small">
-    <span class="site-title">Campus Event Finder</span>
-  </div>
-  <nav class="header-nav">
-    <a href="index.html">Home</a>
-    <a href="user-login.html">User Login</a>
-    <a href="org-login.html">Organization Login</a>
-  </nav>
-</header>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,29 +7,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <img src="logo.png" alt="College Logo" class="logo">
+  
+  <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
 
+  <header class="site-header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-small">
+      <span class="site-title">Campus Event Finder</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="user-login.html">User Login</a>
+      <a href="org-login.html">Organization Login</a>
+    </nav>
+  </header>
+
+  <div class="container" style="text-align: center;">
+    <img src="logo.png" alt="College Logo" class="logo" style="width: 120px; height: 120px; margin-bottom: 20px;">
     <h1>Welcome to College Event Finder</h1>
-    <p>Discover & Register for Tech Fests, Hackathons, and More!</p>
+    <p style="font-size: 1.2em; margin-bottom: 30px;">
+      Discover & Register for Tech Fests, Hackathons, and More!
+    </p>
 
-    <!-- Buttons -->
     <div class="buttons">
       <a href="user-login.html" class="btn">User Login</a>
       <a href="org-login.html" class="btn">Organization Login</a>
     </div>
   </div>
+  
   <footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; 2025 Campus Event Finder | All Rights Reserved</p>
-    <div class="footer-links">
-      <a href="#">About</a>
-      <a href="call => 9887297238">Contact</a>
-      <a href="#">Privacy Policy</a>
+    <div class="footer-content">
+      <p>&copy; 2025 Campus Event Finder | All Rights Reserved</p>
+      <div class="footer-links" style="margin-top: 10px;">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>

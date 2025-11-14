@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+      <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
+  
+    <button id="logout-btn" class="btn btn-logout">Logout</button>
+
+    <div class="container profile-container">
+        <h2>My Profile</h2>
+        <div id="profile-info">
+            <p>Loading profile...</p>
+        </div>
+        
+        <!-- Dashboard ka link -->
+        <a href="user-dashboard.html" class="btn btn-center">Browse All Events</a>
+    </div>
+
+    <div class="container ranking-container">
+        <h2>My Rankings</h2>
+        <div id="profile-ranking">
+            <p>Loading rankings...</p>
+        </div>
+    </div>
+
+    <div class="container events-container">
+        <h2>My Registered Events</h2>
+        <div id="profile-events-list">
+            <p>Loading your registered events...</p>
+        </div>
+    </div>
+
+</body>
+</html>

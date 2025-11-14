@@ -8,6 +8,10 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+    <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
   <div class="container">
     <img src="logo.png" alt="Logo" class="logo">
     <h2>User Registration</h2>
@@ -15,10 +19,23 @@
       <input type="text" id="user-username" placeholder="Username" required>
       <input type="email" id="user-email" placeholder="Email" required>
       <input type="password" id="user-password" placeholder="Password" required>
+      
+      <!-- NAYE FIELDS RANKING KE LIYE -->
+      <select id="user-type" required>
+        <option value="" disabled selected>Select your profile type</option>
+        <option value="Student">Student</option>
+        <option value="Corporate">Corporate Professional</option>
+        <option value="Passout">Passout (Job Seeking)</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="user-institution" placeholder="Your College/Company Name" required>
+      <!-- (e.g., UEM, RUHS, Infosys, etc.) -->
+
       <button type="submit" class="btn">Register</button>
     </form>
-    <p>Already registered? <a href="user-login.html">Login Here</a></p>
+    <p>Already have an account? <a href="user-login.html">Login Here</a></p>
     <a href="index.html" class="btn">⬅ Back</a>
   </div>
 </body>
 </html>
+

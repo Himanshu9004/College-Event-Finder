@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
+
+  <header class="site-header">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-small">
+      <span class="site-title">Campus Event Finder</span>
+    </div>
+    <nav class="header-nav">
+      <a href="org-profile.html">Dashboard</a>
+      <a href="#" id="logout-btn">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align: center;">Welcome, <span id="org-name-display">...</span>!</h2>
+    <p style="text-align: center;">This is your organization dashboard.</p>
+    
+    <div class="card-dark">
+      <h3>Your Profile</h3>
+      <div id="org-profile-info">
+        <p>Loading profile...</p>
+      </div>
+    </div>
+
+    <div class="card-dark">
+      <h3>➕ Create New Event</h3>
+      <form id="create-event-form" class="form-vertical">
+        <input type="text" id="event-name" placeholder="Event Name" required>
+        <input type="text" id="club-name" placeholder="Club/Community Name" required>
+        <input type="text" id="event-eligible" placeholder="Eligible Participants..." required>
+        <input type="date" id="event-date" required>
+        <textarea id="event-description" placeholder="Event Description (AI isko rewrite karega!)" required></textarea>
+        <input type="url" id="event-link" placeholder="Google Form Registration Link" required>
+        <button type="submit" class="btn">Create Event</button>
+      </form>
+    </div>
+
+    <div class="card-dark">
+        <h3>My Created Events</h3>
+        <div id="my-events-list">
+          </div>
+    </div>
+
+  </div>
+  
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -7,8 +7,23 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container" id="event-list-container"></div>
-  
+   <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
+  <button id="logout-btn" class="btn btn-logout">Logout</button>
+
+  <!-- NAYA: Profile page par waapas jaane ka link -->
+  <div class="profile-link-container">
+    <a href="user-profile.html" class="btn">⬅ Back to My Profile</a>
   </div>
+
+  <div class="container" id="event-list-container">
+    <!-- Events yahaan JS se load honge -->
+    <h2>📅 Events Near You</h2>
+    <p>Loading events...</p>
+  </div>
+  
 </body>
 </html>
+

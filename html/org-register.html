@@ -8,18 +8,32 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
+
+  <video autoplay muted loop id="main-bg-video">
+    <source src="main-bg.mp4" type="video/mp4">
+    Aapka browser video tag support nahi karta.
+  </video>
+
+  <div class="auth-container">
+
     <img src="logo.png" alt="Logo" class="logo">
     <h2>Organization Registration</h2>
-    <form id="org-register-form">
-      <input type="text" id="org-name" placeholder="Organization Name" required>
-      <input type="email" id="org-email" placeholder="Email" required>
-      <input type="password" id="org-password" placeholder="Password" required>
-      <input type="text" id="org-college" placeholder="University/College Name" required>
-      <button type="submit" class="btn">Register</button>
-    </form>
+    
+    <form id="org-register-form" class="form-vertical">
+    
+    <div class="input-group">
+        <input type="text" id="org-name" placeholder=" " required>
+        <label for="org-name">Organization Name</label>
+    </div>
+
+    <div class="input-group">
+        <input type="email" id="org-email" placeholder=" " required>
+        <label for="org-email">Email</label>
+    </div>
+</form>
+    
     <p>Already registered? <a href="org-login.html">Login Here</a></p>
-    <a href="index.html" class="btn">⬅ Back</a>
+    <a href="index.html" class="btn btn-secondary" style="margin-top: 10px;">⬅ Back to Home</a>
   </div>
 </body>
 </html>
