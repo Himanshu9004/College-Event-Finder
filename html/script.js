@@ -117,7 +117,7 @@ async function loadEvents() {
 
   eventListContainer.innerHTML = "<p>Loading events...</p>";
   try {
-    const response = await fetch("https://college-event-finder-2.onrender.com");
+   const response = await fetch("https://college-event-finder-2.onrender.com/api/all-events");
     allEvents = await response.json(); 
     
     if (allEvents.length === 0) {
@@ -193,7 +193,7 @@ async function fetchPersonalizedDescription(event) {
   if (!descElement) return; // Agar element na mile
 
   try {
-    const response = await fetch(`http://127.0.0.1:5000/api/user/generate-event-view/${event.id}`, {
+    const response = await fetch(`https://college-event-finder-2.onrender.com/api/user/generate-event-view/${event.id}`, {
       method: 'GET',
       credentials: 'include' // Session cookie bhejega
     });
@@ -221,7 +221,7 @@ async function fetchPersonalizedDescription(event) {
 async function registerAndOpenLink(eventId, googleFormLink) {
   // ... (Poora ka poora registerAndOpenLink function yahaan copy-paste karein) ...
   try {
-    const response = await fetch(`http://127.0.0.1:5000/api/user/register-event/${eventId}`, {
+    const response = await fetch(`https://college-event-finder-2.onrender.com/api/user/register-event/${eventId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: 'include' 
@@ -291,7 +291,7 @@ async function loadUserProfile() {
   }
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/user/profile", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/user/profile", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
@@ -359,7 +359,7 @@ async function saveEvent(event) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/create-event", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/create-event", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newEvent),
@@ -384,7 +384,7 @@ async function loadMyEvents() {
   myEventsList.innerHTML = "<p>Loading your events...</p>";
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/org/my-events", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/org/my-events", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
@@ -427,7 +427,7 @@ async function deleteEvent(eventId) {
     return;
   }
   try {
-    const response = await fetch(`http://127.0.0.1:5000/api/org/delete-event/${eventId}`, {
+    const response = await fetch(`https://college-event-finder-2.onrender.com/api/org/delete-event/${eventId}`, {
       method: "DELETE",
       credentials: 'include'
     });
@@ -448,7 +448,7 @@ async function loadOrgProfile() {
   if (!profileInfo) return; 
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/org/profile", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/org/profile", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
@@ -484,7 +484,7 @@ async function loginAdmin(event) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/admin/login", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -504,7 +504,7 @@ async function loginAdmin(event) {
 
 async function loadAdminStats() {
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/admin/stats", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/admin/stats", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
@@ -530,7 +530,7 @@ async function listOrganizations() {
   listContainer.innerHTML = "<p>Loading organizations...</p>";
   
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/admin/organizations", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/admin/organizations", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
       credentials: 'include'
@@ -575,7 +575,7 @@ async function registerOrg(event) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/org/register", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/org/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -599,7 +599,7 @@ async function loginOrg(event) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/org/login", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/org/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -633,7 +633,7 @@ async function registerUser(event) {
   }
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/user/register", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/user/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -657,7 +657,7 @@ async function loginUser(event) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/user/login", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/user/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -679,7 +679,7 @@ async function logout(event) {
   event.preventDefault(); 
   
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/logout", {
+    const response = await fetch("https://college-event-finder-2.onrender.com/api/logout", {
       method: "POST",
       credentials: 'include' 
     });
