@@ -117,7 +117,7 @@ async function loadEvents() {
 
   eventListContainer.innerHTML = "<p>Loading events...</p>";
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/all-events");
+    const response = await fetch("https://college-event-finder-2.onrender.com");
     allEvents = await response.json(); 
     
     if (allEvents.length === 0) {
